@@ -1,0 +1,254 @@
+/*Gonefour_boke*/
+.go{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 1000;
+}
+.more{
+    /*width: ;*/
+    position: fixed;
+    right: 60px;
+    bottom: 80px;
+    z-index: 1000;
+    animation: more 0.3s linear infinite alternate;
+}
+.content{
+    width: 1000px;
+    height: 600px;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 500;
+}
+.screen01{
+    background: url("../images/01-bg.png") no-repeat center bottom;
+}
+.screen01 .goods{
+    text-align: center;
+    margin-top: 20%;
+}
+.screen01 .sofa{
+    position: absolute;
+    left: 240px;
+    top: 150px;
+    animation: more 0.8s linear infinite alternate;
+}
+.screen01 .fly{
+    position: absolute;
+    right: -50px;
+    top: 20px;
+    animation: fly01 0.7s linear infinite alternate;
+}
+
+@keyframes fly01 {
+    from{
+        transform: translateY(-30px);
+    }
+    to{
+        transform: translateY(30px);
+    }
+}
+@keyframes more {
+    from{
+        transform: translateY(-10px);
+    }
+    to{
+        transform: translateY(10px);
+    }
+}
+
+.screen02{
+    background: url("../images/02-bg.png") no-repeat center bottom;
+}
+.screen02 .goods{
+    position: absolute;
+    left: 50%;
+    bottom: 210px;
+    margin-left: -220px;    
+    transform: scale(0);
+    transform-origin: right bottom;
+}
+.screen02.now .goods{
+    transform: scale(1);
+    transition: all 1s linear 2s;
+}
+.screen02 .sofa{
+    display: block;
+    transform: scale(0.5);
+    position: absolute;
+    left: 340px;
+    top: 132px;
+    opacity: 0;
+    z-index: 1001;
+}
+.screen02.leaved .sofa{
+    animation: sofa2 1s linear;
+
+}
+.screen02 .input{
+    position: absolute;
+    right: 222px; 
+    top: 120px;
+    /*transform: scale(0.7);*/
+    /*transform: translate(-185px,130px);*/
+    /*transform: translate(2000px,130px);*/
+    opacity: 0;
+    transform-origin: right top;
+}
+.screen02.now .input{
+    animation: input2 3s linear forwards;
+}
+.screen02 .input .search{
+    
+}
+.screen02 .input .key{
+    position: absolute;
+    left: 100px;
+    top: 4px;
+    opacity: 0;
+}
+.screen02.now .input .key{
+    opacity: 1;
+    transition: all 1s linear 1s;
+}
+.screen02 .text{
+    text-align: center;
+}
+.screen02 .text .text1{
+}
+.screen02 .text .text2{
+    position: absolute;
+    opacity: 0;
+}
+
+.screen02.now .text .text1{
+    position: absolute;
+    opacity: 0;
+}
+.screen02.now .text .text2{
+    position: static;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+@keyframes input2{
+    0%{
+        opacity: 1;
+        transform: translate(2000px,130px);
+    }
+    33.3%{
+        transform: translate(-185px,130px);
+    }
+    67%{
+        transform: translate(-185px,130px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(0.7);
+    }
+}
+@keyframes sofa2{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        z-index: 1200;
+        transform: translate(-70px,1000px);
+    }
+}
+
+.screen03{
+    background: url('../images/03-bg.png') no-repeat center bottom;
+}
+.screen03 .sofa{
+    position: absolute;
+    left: 270px;
+    top: 200px;
+    display: none;
+}
+.screen03.now .sofa{
+    display: block;
+    z-index: 1000;
+}
+.screen03.leaved .sofa{
+    transform: translate(150px,900px) rotate(45deg);
+    transition: all 1s linear;
+}
+.screen03 .change{
+    position: absolute;
+    right: 165px;
+    bottom: 180px;
+}
+.screen03 .change img:first-child{}
+.screen03.now .change img:first-child{
+    display: none;
+}
+.screen03 .change img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+
+.screen03.now .change img:last-child{
+    position: static;
+    opacity: 1;
+    transition: all 1s linear;
+}
+.screen03 .cart{
+    position: absolute;
+    right: 243px;
+    bottom: 110px;
+}
+.screen03 .cart img:first-child{}
+.screen03.now .cart img:first-child{
+    display: none;
+}
+.screen03 .cart img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.screen03.now .cart img:last-child{
+    position: static;
+    opacity: 1;
+    transition: all 1s linear;
+}
+
+
+.screen04{
+    background: url('../images/04-bg.png') no-repeat center bottom;
+}
+.screen04 .cloud{
+    position: absolute;
+    left: -500px;
+    top: -50px;
+    animation: cloud4 10s linear infinite alternate;
+}
+.screen04 .text{
+    text-align: center;
+    margin-top: 120px;
+}
+.screen04 .text img:first-child{}
+.screen04.now .text img:first-child{}
+.screen04 .text img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.screen04.now .text img:last-child{}
+.screen04 .cart{
+    text-align: center;
+    margin-top: 50px;
+}
+@keyframes cloud4{
+    from{
+
+    }
+    to{
+        transform: translateX(1000px);
+    }
+}
